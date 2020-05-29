@@ -1,0 +1,174 @@
+<div class="form-wrapper">
+    <h2>Demographics</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td><input name="name" required="required" type="text" value="{{ variables.name is defined ? variables.name }}" placeholder="Character Name" /></td>
+                <td>Player Name</td>
+                <td><input name="player_name" type="text" value="{{ variables.player_name is defined ? variables.player_name }}" placeholder="" /></td>
+                <td>Date</td>
+                <td><input name="date" type="text" value="{{ variables.date is defined ? variables.date }}" placeholder="" /></td>
+            </tr>
+            <tr>
+                <td>Species</td>
+                <td><input name="species" type="text" value="{{ variables.species is defined ? variables.species }}" placeholder="" /></td>
+                <td>Race</td>
+                <td><input name="race" type="text" value="{{ variables.race is defined ? variables.race }}" placeholder="" /></td>
+                <td>Culture</td>
+                <td><input name="culture" type="text" value="{{ variables.culture is defined ? variables.culture }}" placeholder="" /></td>
+            </tr>
+            <tr>
+                <td>Homeland</td>
+                <td><input name="homeland" type="text" value="{{ variables.homeland is defined ? variables.homeland }}" placeholder="" /></td>
+                <td>Career</td>
+                <td><input name="career" type="text" value="{{ variables.career is defined ? variables.career }}" placeholder="" /></td>
+                <td>Social Class</td>
+                <td><input name="social_class" type="text" value="{{ variables.social_class is defined ? variables.social_class }}" placeholder="" /></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input name="age" type="number" value="{{ variables.age is defined ? variables.age }}" placeholder="" /></td>
+                <td>Height</td>
+                <td><input name="height" type="text" value="{{ variables.height is defined ? variables.height }}" placeholder="" /></td>
+                <td>Weight</td>
+                <td><input name="weight" type="text" value="{{ variables.weight is defined ? variables.weight }}" placeholder="" /></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input name="gender" type="text" value="{{ variables.gender is defined ? variables.gender }}" placeholder="" /></td>
+                <td>Frame</td>
+                <td><input name="frame" type="text" value="{{ variables.frame is defined ? variables.frame }}" placeholder="" /></td>
+                <td>Handedness</td>
+                <td><input name="handedness" type="text" value="{{ variables.handedness is defined ? variables.handedness }}" placeholder="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr />
+
+    <h2>Characteristics</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>Strength</td>
+                <td>Constitution</td>
+                <td>Size</td>
+                <td>Dexterity</td>
+                <td>Intelligence</td>
+                <td>Power</td>
+                <td>Charisma</td>
+            </tr>
+            <tr>
+                <td><input name="strength" type="number" value="{{ variables.strength is defined ? variables.strength }}" placeholder="" /></td>
+                <td><input name="constitution" type="number" value="{{ variables.constitution is defined ? variables.constitution }}" placeholder="" /></td>
+                <td><input name="size" type="number" value="{{ variables.size is defined ? variables.size }}" placeholder="" /></td>
+                <td><input name="dexterity" type="number" value="{{ variables.dexterity is defined ? variables.dexterity }}" placeholder="" /></td>
+                <td><input name="intelligence" type="number" value="{{ variables.intelligence is defined ? variables.intelligence }}" placeholder="" /></td>
+                <td><input name="power" type="number" value="{{ variables.power is defined ? variables.power }}" placeholder="" /></td>
+                <td><input name="charisma" type="number" value="{{ variables.charisma is defined ? variables.charisma }}" placeholder="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Attributes</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>Action Points</td>
+                <td>Damage Modifier</td>
+                <td>Experience Modifier</td>
+                <td>Healing Rate</td>
+                <td>Initiative</td>
+                <td>Luck Points</td>
+                <td>Movement Rate</td>
+            </tr>
+            <tr>
+                <td><input name="action_points" type="number" value="{{ variables.action_points is defined ? variables.action_points }}" placeholder="" /></td>
+                <td><input name="damage_modifier" type="text" value="{{ variables.damage_modifier is defined ? variables.damage_modifier }}" placeholder="" /></td>
+                <td><input name="experience_modifier" type="number" value="{{ variables.experience_modifier is defined ? variables.experience_modifier }}" placeholder="" /></td>
+                <td><input name="healing_rate" type="number" value="{{ variables.healing_rate is defined ? variables.healing_rate }}" placeholder="" /></td>
+                <td><input name="initiative" type="number" value="{{ variables.initiative is defined ? variables.initiative }}" placeholder="" /></td>
+                <td><input name="luck_points" type="number" value="{{ variables.luck_points is defined ? variables.luck_points }}" placeholder="" /></td>
+                <td><input name="movement_rate" type="number" value="{{ variables.movement_rate is defined ? variables.movement_rate }}" placeholder="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Magic</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>Magic Points</td>
+                <td><input name="magic_points" type="number" value="{{ variables.magic_points is defined ? variables.magic_points }}" placeholder="" /></td>
+            </tr>
+            <tr>
+                <td>Used Magic Points</td>
+                <td><input name="used_magic_points" type="text" value="{{ variables.used_magic_points is defined ? variables.used_magic_points }}" placeholder="Active Effects..." /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr />
+
+    <h2>Description</h2>
+    <div class="ibox">
+        <div class="ibox-content">
+            <h4 class="header-title">Description</h4>
+            <div class="col-sm-12">
+                <textarea id="description" class="form-control mention" name="description" rows="3" placeholder="">
+                    {{ variables.description is defined ? variables.description }}
+                </textarea>
+                <p class="description form-control-description">Â </p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <h4 class="header-title">Notes</h4>
+            <div class="col-sm-12">
+                <textarea id="notes" class="form-control mention" name="notes" rows="3" placeholder="">
+                    {{ variables.notes is defined ? variables.notes }}
+                </textarea>
+                <p class="description form-control-description">Background, Culture, Family...</p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <h4 class="header-title">Experience Rolls</h4>
+            <div class="col-sm-12">
+                <textarea id="experience_rolls" class="form-control mention" name="experience_rolls" rows="3" placeholder="">
+                    {{ variables.experience_rolls is defined ? variables.experience_rolls }}
+                </textarea>
+                <p class="description form-control-description">Â </p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <h4 class="header-title">Cult/Brotherhood Information</h4>
+            <div class="col-sm-12">
+                <textarea id="cultbrotherhood_information" class="form-control mention" name="cultbrotherhood_information" rows="3" placeholder="">
+                    {{ variables.cultbrotherhood_information is defined ? variables.cultbrotherhood_information }}
+                </textarea>
+                <p class="description form-control-description">Ranks, Benefits, Restrictions, Gifts...</p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="ibox">
+        <div class="ibox-content">
+            <h4 class="header-title">Money and Wealth</h4>
+            <div class="col-sm-12">
+                <textarea class="form-control mention" id="money_and_wealth" name="money_and_wealth" rows="3" placeholder="">
+                    {{ variables.money_and_wealth is defined ? variables.money_and_wealth }}
+                </textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <hr />

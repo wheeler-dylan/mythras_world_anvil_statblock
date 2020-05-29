@@ -1,0 +1,885 @@
+﻿<div class="form-wrapper">
+    <h2>Demographics</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td><input name="name" required="required" type="text" value="{{ variables.name is defined ? variables.name }}" placeholder="Character Name" /></td>
+                <td>Player Name</td>
+                <td><input name="player_name" type="text" value="{{ variables.player_name is defined ? variables.player_name }}" placeholder="" /></td>
+                <td>Date</td>
+                <td><input name="date" type="text" value="{{ variables.date is defined ? variables.date }}" placeholder="" /></td>
+            </tr>
+            <tr>
+                <td>Species</td>
+                <td><input name="species" type="text" value="{{ variables.species is defined ? variables.species }}" placeholder="" /></td>
+                <td>Race</td>
+                <td><input name="race" type="text" value="{{ variables.race is defined ? variables.race }}" placeholder="" /></td>
+                <td>Culture</td>
+                <td><input name="culture" type="text" value="{{ variables.culture is defined ? variables.culture }}" placeholder="" /></td>
+            </tr>
+            <tr>
+                <td>Homeland</td>
+                <td><input name="homeland" type="text" value="{{ variables.homeland is defined ? variables.homeland }}" placeholder="" /></td>
+                <td>Career</td>
+                <td><input name="career" type="text" value="{{ variables.career is defined ? variables.career }}" placeholder="" /></td>
+                <td>Social Class</td>
+                <td><input name="social_class" type="text" value="{{ variables.social_class is defined ? variables.social_class }}" placeholder="" /></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input name="age" type="number" value="{{ variables.age is defined ? variables.age }}" placeholder="" /></td>
+                <td>Height</td>
+                <td><input name="height" type="text" value="{{ variables.height is defined ? variables.height }}" placeholder="" /></td>
+                <td>Weight</td>
+                <td><input name="weight" type="text" value="{{ variables.weight is defined ? variables.weight }}" placeholder="" /></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input name="gender" type="text" value="{{ variables.gender is defined ? variables.gender }}" placeholder="" /></td>
+                <td>Frame</td>
+                <td><input name="frame" type="text" value="{{ variables.frame is defined ? variables.frame }}" placeholder="" /></td>
+                <td>Handedness</td>
+                <td><input name="handedness" type="text" value="{{ variables.handedness is defined ? variables.handedness }}" placeholder="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr />
+
+    <h2>Characteristics</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>Strength</td>
+                <td>Constitution</td>
+                <td>Size</td>
+                <td>Dexterity</td>
+                <td>Intelligence</td>
+                <td>Power</td>
+                <td>Charisma</td>
+            </tr>
+            <tr>
+                <td><input name="strength" type="number" value="{{ variables.strength is defined ? variables.strength }}" placeholder="" /></td>
+                <td><input name="constitution" type="number" value="{{ variables.constitution is defined ? variables.constitution }}" placeholder="" /></td>
+                <td><input name="size" type="number" value="{{ variables.size is defined ? variables.size }}" placeholder="" /></td>
+                <td><input name="dexterity" type="number" value="{{ variables.dexterity is defined ? variables.dexterity }}" placeholder="" /></td>
+                <td><input name="intelligence" type="number" value="{{ variables.intelligence is defined ? variables.intelligence }}" placeholder="" /></td>
+                <td><input name="power" type="number" value="{{ variables.power is defined ? variables.power }}" placeholder="" /></td>
+                <td><input name="charisma" type="number" value="{{ variables.charisma is defined ? variables.charisma }}" placeholder="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Attributes</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>Action Points</td>
+                <td>Damage Modifier</td>
+                <td>Experience Modifier</td>
+                <td>Healing Rate</td>
+                <td>Initiative</td>
+                <td>Luck Points</td>
+                <td>Movement Rate</td>
+            </tr>
+            <tr>
+                <td><input name="action_points" type="number" value="{{ variables.action_points is defined ? variables.action_points }}" placeholder="" /></td>
+                <td><input name="damage_modifier" type="text" value="{{ variables.damage_modifier is defined ? variables.damage_modifier }}" placeholder="" /></td>
+                <td><input name="experience_modifier" type="number" value="{{ variables.experience_modifier is defined ? variables.experience_modifier }}" placeholder="" /></td>
+                <td><input name="healing_rate" type="number" value="{{ variables.healing_rate is defined ? variables.healing_rate }}" placeholder="" /></td>
+                <td><input name="initiative" type="number" value="{{ variables.initiative is defined ? variables.initiative }}" placeholder="" /></td>
+                <td><input name="luck_points" type="number" value="{{ variables.luck_points is defined ? variables.luck_points }}" placeholder="" /></td>
+                <td><input name="movement_rate" type="number" value="{{ variables.movement_rate is defined ? variables.movement_rate }}" placeholder="" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Magic</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>Magic Points</td>
+                <td><input name="magic_points" type="number" value="{{ variables.magic_points is defined ? variables.magic_points }}" placeholder="" /></td>
+            </tr>
+            <tr>
+                <td>Used Magic Points</td>
+                <td><input name="used_magic_points" type="text" value="{{ variables.used_magic_points is defined ? variables.used_magic_points }}" placeholder="Active Effects..." /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr />
+
+    <h2>Description</h2>
+    <div class="ibox">
+        <div class="ibox-content">
+            <h4 class="header-title">Description</h4>
+            <div class="col-sm-12">
+                <textarea id="description" class="form-control mention" name="description" rows="3" placeholder="">
+                    {{ variables.description is defined ? variables.description }}
+                </textarea>
+                <p class="description form-control-description">Â </p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <h4 class="header-title">Notes</h4>
+            <div class="col-sm-12">
+                <textarea id="notes" class="form-control mention" name="notes" rows="3" placeholder="">
+                    {{ variables.notes is defined ? variables.notes }}
+                </textarea>
+                <p class="description form-control-description">Background, Culture, Family...</p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <h4 class="header-title">Experience Rolls</h4>
+            <div class="col-sm-12">
+                <textarea id="experience_rolls" class="form-control mention" name="experience_rolls" rows="3" placeholder="">
+                    {{ variables.experience_rolls is defined ? variables.experience_rolls }}
+                </textarea>
+                <p class="description form-control-description">Â </p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <h4 class="header-title">Cult/Brotherhood Information</h4>
+            <div class="col-sm-12">
+                <textarea id="cultbrotherhood_information" class="form-control mention" name="cultbrotherhood_information" rows="3" placeholder="">
+                    {{ variables.cultbrotherhood_information is defined ? variables.cultbrotherhood_information }}
+                </textarea>
+                <p class="description form-control-description">Ranks, Benefits, Restrictions, Gifts...</p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="ibox">
+        <div class="ibox-content">
+            <h4 class="header-title">Money and Wealth</h4>
+            <div class="col-sm-12">
+                <textarea class="form-control mention" id="money_and_wealth" name="money_and_wealth" rows="3" placeholder="">
+                    {{ variables.money_and_wealth is defined ? variables.money_and_wealth }}
+                </textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <h2>Standard Skills</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td><h4>Skill</h4></td>
+                <td><h4>Base %</h4></td>
+                <td><h4>Culture/Career</h4></td>
+                <td><h4><center>%</center></h4></td>
+                <td><h4>Notes</h4></td>
+            </tr>
+            <tr>
+                <td>Athletics</td>
+                <td>Str + Dex</td>
+                <td><input {% if variables.athletics_checkbox is defined and variables.athletics_checkbox == 1 %} checked='checked' {% endif %} {% if variables.athletics_checkbox is defined and variables.athletics_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='athletics_checkbox' name='athletics_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='athletics' class='form-control' name='athletics' type='number' value='{{ variables.athletics is defined ? variables.athletics }}' placeholder='' /></td>
+                <td><input id='athletics_notes' class='form-control' name='athletics_notes' type='text' value='{{ variables.athletics is defined ? variables.athletics_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Boating</td>
+                <td>Str + Con</td>
+                <td><input {% if variables.boating_checkbox is defined and variables.boating_checkbox == 1 %} checked='checked' {% endif %} {% if variables.boating_checkbox is defined and variables.boating_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='boating_checkbox' name='boating_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='boating' class='form-control' name='boating' type='number' value='{{ variables.boating is defined ? variables.boating }}' placeholder='' /></td>
+                <td><input id='boating_notes' class='form-control' name='boating_notes' type='text' value='{{ variables.boating is defined ? variables.boating_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Conceal</td>
+                <td>Dex + Pow</td>
+                <td><input {% if variables.conceal_checkbox is defined and variables.conceal_checkbox == 1 %} checked='checked' {% endif %} {% if variables.conceal_checkbox is defined and variables.conceal_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='conceal_checkbox' name='conceal_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='conceal' class='form-control' name='conceal' type='number' value='{{ variables.conceal is defined ? variables.conceal }}' placeholder='' /></td>
+                <td><input id='conceal_notes' class='form-control' name='conceal_notes' type='text' value='{{ variables.conceal is defined ? variables.conceal_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Customs</td>
+                <td>Int x2</td>
+                <td><input {% if variables.customs_checkbox is defined and variables.customs_checkbox == 1 %} checked='checked' {% endif %} {% if variables.customs_checkbox is defined and variables.customs_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='customs_checkbox' name='customs_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='customs' class='form-control' name='customs' type='number' value='{{ variables.customs is defined ? variables.customs }}' placeholder='' /></td>
+                <td><input id='customs_notes' class='form-control' name='customs_notes' type='text' value='{{ variables.customs is defined ? variables.customs_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Dance</td>
+                <td>Dex + Cha</td>
+                <td><input {% if variables.dance_checkbox is defined and variables.dance_checkbox == 1 %} checked='checked' {% endif %} {% if variables.dance_checkbox is defined and variables.dance_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='dance_checkbox' name='dance_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='dance' class='form-control' name='dance' type='number' value='{{ variables.dance is defined ? variables.dance }}' placeholder='' /></td>
+                <td><input id='dance_notes' class='form-control' name='dance_notes' type='text' value='{{ variables.dance is defined ? variables.dance_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Deceit</td>
+                <td>Int + Cha</td>
+                <td><input {% if variables.deceit_checkbox is defined and variables.deceit_checkbox == 1 %} checked='checked' {% endif %} {% if variables.deceit_checkbox is defined and variables.deceit_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='deceit_checkbox' name='deceit_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='deceit' class='form-control' name='deceit' type='number' value='{{ variables.deceit is defined ? variables.deceit }}' placeholder='' /></td>
+                <td><input id='deceit_notes' class='form-control' name='deceit_notes' type='text' value='{{ variables.deceit is defined ? variables.deceit_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Drive</td>
+                <td>Dex + Pow</td>
+                <td><input {% if variables.drive_checkbox is defined and variables.drive_checkbox == 1 %} checked='checked' {% endif %} {% if variables.drive_checkbox is defined and variables.drive_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='drive_checkbox' name='drive_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='drive' class='form-control' name='drive' type='number' value='{{ variables.drive is defined ? variables.drive }}' placeholder='' /></td>
+                <td><input id='drive_notes' class='form-control' name='drive_notes' type='text' value='{{ variables.drive is defined ? variables.drive_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>First Aid</td>
+                <td>Int + Dex</td>
+                <td><input {% if variables.first_aid_checkbox is defined and variables.first_aid_checkbox == 1 %} checked='checked' {% endif %} {% if variables.first_aid_checkbox is defined and variables.first_aid_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='first_aid_checkbox' name='first_aid_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='first_aid' class='form-control' name='first_aid' type='number' value='{{ variables.first_aid is defined ? variables.first_aid }}' placeholder='' /></td>
+                <td><input id='first_aid_notes' class='form-control' name='first_aid_notes' type='text' value='{{ variables.first_aid is defined ? variables.first_aid_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Influence</td>
+                <td>Cha x2</td>
+                <td><input {% if variables.influence_checkbox is defined and variables.influence_checkbox == 1 %} checked='checked' {% endif %} {% if variables.influence_checkbox is defined and variables.influence_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='influence_checkbox' name='influence_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='influence' class='form-control' name='influence' type='number' value='{{ variables.influence is defined ? variables.influence }}' placeholder='' /></td>
+                <td><input id='influence_notes' class='form-control' name='influence_notes' type='text' value='{{ variables.influence is defined ? variables.influence_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Insight</td>
+                <td>Int + Pow</td>
+                <td><input {% if variables.insight_checkbox is defined and variables.insight_checkbox == 1 %} checked='checked' {% endif %} {% if variables.insight_checkbox is defined and variables.insight_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='insight_checkbox' name='insight_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='insight' class='form-control' name='insight' type='number' value='{{ variables.insight is defined ? variables.insight }}' placeholder='' /></td>
+                <td><input id='insight_notes' class='form-control' name='insight_notes' type='text' value='{{ variables.insight is defined ? variables.insight_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Locale</td>
+                <td>Int x2</td>
+                <td><input {% if variables.locale_checkbox is defined and variables.locale_checkbox == 1 %} checked='checked' {% endif %} {% if variables.locale_checkbox is defined and variables.locale_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='locale_checkbox' name='locale_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='locale' class='form-control' name='locale' type='number' value='{{ variables.locale is defined ? variables.locale }}' placeholder='' /></td>
+                <td><input id='locale_notes' class='form-control' name='locale_notes' type='text' value='{{ variables.locale is defined ? variables.locale_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Perception</td>
+                <td>Int + Pow</td>
+                <td><input {% if variables.perception_checkbox is defined and variables.perception_checkbox == 1 %} checked='checked' {% endif %} {% if variables.perception_checkbox is defined and variables.perception_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='perception_checkbox' name='perception_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='perception' class='form-control' name='perception' type='number' value='{{ variables.perception is defined ? variables.perception }}' placeholder='' /></td>
+                <td><input id='perception_notes' class='form-control' name='perception_notes' type='text' value='{{ variables.perception is defined ? variables.perception_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Ride</td>
+                <td>Dex + Pow</td>
+                <td><input {% if variables.ride_checkbox is defined and variables.ride_checkbox == 1 %} checked='checked' {% endif %} {% if variables.ride_checkbox is defined and variables.ride_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='ride_checkbox' name='ride_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='ride' class='form-control' name='ride' type='number' value='{{ variables.ride is defined ? variables.ride }}' placeholder='' /></td>
+                <td><input id='ride_notes' class='form-control' name='ride_notes' type='text' value='{{ variables.ride is defined ? variables.ride_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Stealth</td>
+                <td>Dex + Int</td>
+                <td><input {% if variables.stealth_checkbox is defined and variables.stealth_checkbox == 1 %} checked='checked' {% endif %} {% if variables.stealth_checkbox is defined and variables.stealth_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='stealth_checkbox' name='stealth_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='stealth' class='form-control' name='stealth' type='number' value='{{ variables.stealth is defined ? variables.stealth }}' placeholder='' /></td>
+                <td><input id='stealth_notes' class='form-control' name='stealth_notes' type='text' value='{{ variables.stealth is defined ? variables.stealth_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Swim</td>
+                <td>Str + Con</td>
+                <td><input {% if variables.swim_checkbox is defined and variables.swim_checkbox == 1 %} checked='checked' {% endif %} {% if variables.swim_checkbox is defined and variables.swim_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='swim_checkbox' name='swim_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='swim' class='form-control' name='swim' type='number' value='{{ variables.swim is defined ? variables.swim }}' placeholder='' /></td>
+                <td><input id='swim_notes' class='form-control' name='swim_notes' type='text' value='{{ variables.swim is defined ? variables.swim_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Unarmed</td>
+                <td>Str + Dex</td>
+                <td><input {% if variables.unarmed_checkbox is defined and variables.unarmed_checkbox == 1 %} checked='checked' {% endif %} {% if variables.unarmed_checkbox is defined and variables.unarmed_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='unarmed_checkbox' name='unarmed_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='unarmed' class='form-control' name='unarmed' type='number' value='{{ variables.unarmed is defined ? variables.unarmed }}' placeholder='' /></td>
+                <td><input id='unarmed_notes' class='form-control' name='unarmed_notes' type='text' value='{{ variables.unarmed is defined ? variables.unarmed_notes }}' placeholder='' /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Resistances</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td><h4>Skill</h4></td>
+                <td><h4>Base %</h4></td>
+                <td><h4>Culture/Career</h4></td>
+                <td><h4><center>%</center></h4></td>
+                <td><h4>Notes</h4></td>
+            </tr>
+            <tr>
+                <td>Brawn</td>
+                <td>Str + Siz</td>
+                <td><input {% if variables.brawn_checkbox is defined and variables.brawn_checkbox == 1 %} checked='checked' {% endif %} {% if variables.brawn_checkbox is defined and variables.brawn_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='brawn_checkbox' name='brawn_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='brawn' class='form-control' name='brawn' type='number' value='{{ variables.brawn is defined ? variables.brawn }}' placeholder='' /></td>
+                <td><input id='brawn_notes' class='form-control' name='brawn_notes' type='text' value='{{ variables.brawn is defined ? variables.brawn_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Endurance</td>
+                <td>Con x2</td>
+                <td><input {% if variables.endurance_checkbox is defined and variables.endurance_checkbox == 1 %} checked='checked' {% endif %} {% if variables.endurance_checkbox is defined and variables.endurance_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='endurance_checkbox' name='endurance_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='endurance' class='form-control' name='endurance' type='number' value='{{ variables.endurance is defined ? variables.endurance }}' placeholder='' /></td>
+                <td><input id='endurance_notes' class='form-control' name='endurance_notes' type='text' value='{{ variables.endurance is defined ? variables.endurance_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Evade</td>
+                <td>Dex x2</td>
+                <td><input {% if variables.evade_checkbox is defined and variables.evade_checkbox == 1 %} checked='checked' {% endif %} {% if variables.evade_checkbox is defined and variables.evade_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='evade_checkbox' name='evade_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='evade' class='form-control' name='evade' type='number' value='{{ variables.evade is defined ? variables.evade }}' placeholder='' /></td>
+                <td><input id='evade_notes' class='form-control' name='evade_notes' type='text' value='{{ variables.evade is defined ? variables.evade_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Willpower</td>
+                <td>Pow x2</td>
+                <td><input {% if variables.willpower_checkbox is defined and variables.willpower_checkbox == 1 %} checked='checked' {% endif %} {% if variables.willpower_checkbox is defined and variables.willpower_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='willpower_checkbox' name='willpower_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='willpower' class='form-control' name='willpower' type='number' value='{{ variables.willpower is defined ? variables.willpower }}' placeholder='' /></td>
+                <td><input id='willpower_notes' class='form-control' name='willpower_notes' type='text' value='{{ variables.willpower is defined ? variables.willpower_notes }}' placeholder='' /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Professional Skills</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td><h4>Skill</h4></td>
+                <td><h4>Base %</h4></td>
+                <td><h4>Culture/Career</h4></td>
+                <td><h4><center>%</center></h4></td>
+                <td><h4>Notes</h4></td>
+            </tr>
+            <tr>
+                <td>Acting</td>
+                <td>Cha x2</td>
+                <td><input {% if variables.acting_checkbox is defined and variables.acting_checkbox == 1 %} checked='checked' {% endif %} {% if variables.acting_checkbox is defined and variables.acting_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='acting_checkbox' name='acting_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='acting' class='form-control' name='acting' type='number' value='{{ variables.acting is defined ? variables.acting }}' placeholder='' /></td>
+                <td><input id='acting_notes' class='form-control' name='acting_notes' type='text' value='{{ variables.acting is defined ? variables.acting_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Acrobatics</td>
+                <td>Str + Dex</td>
+                <td><input {% if variables.acrobatics_checkbox is defined and variables.acrobatics_checkbox == 1 %} checked='checked' {% endif %} {% if variables.acrobatics_checkbox is defined and variables.acrobatics_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='acrobatics_checkbox' name='acrobatics_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='acrobatics' class='form-control' name='acrobatics' type='number' value='{{ variables.acrobatics is defined ? variables.acrobatics }}' placeholder='' /></td>
+                <td><input id='acrobatics_notes' class='form-control' name='acrobatics_notes' type='text' value='{{ variables.acrobatics is defined ? variables.acrobatics_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Art</td>
+                <td>Cha + Pow</td>
+                <td><input {% if variables.art_checkbox is defined and variables.art_checkbox == 1 %} checked='checked' {% endif %} {% if variables.art_checkbox is defined and variables.art_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='art_checkbox' name='art_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='art' class='form-control' name='art' type='number' value='{{ variables.art is defined ? variables.art }}' placeholder='' /></td>
+                <td><input id='art_notes' class='form-control' name='art_notes' type='text' value='{{ variables.art is defined ? variables.art_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Bureaucracy</td>
+                <td>Int x2</td>
+                <td><input {% if variables.bureaucracy_checkbox is defined and variables.bureaucracy_checkbox == 1 %} checked='checked' {% endif %} {% if variables.bureaucracy_checkbox is defined and variables.bureaucracy_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='bureaucracy_checkbox' name='bureaucracy_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='bureaucracy' class='form-control' name='bureaucracy' type='number' value='{{ variables.bureaucracy is defined ? variables.bureaucracy }}' placeholder='' /></td>
+                <td><input id='bureaucracy_notes' class='form-control' name='bureaucracy_notes' type='text' value='{{ variables.bureaucracy is defined ? variables.bureaucracy_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Commerce</td>
+                <td>Int + Cha</td>
+                <td><input {% if variables.commerce_checkbox is defined and variables.commerce_checkbox == 1 %} checked='checked' {% endif %} {% if variables.commerce_checkbox is defined and variables.commerce_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='commerce_checkbox' name='commerce_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='commerce' class='form-control' name='commerce' type='number' value='{{ variables.commerce is defined ? variables.commerce }}' placeholder='' /></td>
+                <td><input id='commerce_notes' class='form-control' name='commerce_notes' type='text' value='{{ variables.commerce is defined ? variables.commerce_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Courtesy</td>
+                <td>Int + Cha</td>
+                <td><input {% if variables.courtesy_checkbox is defined and variables.courtesy_checkbox == 1 %} checked='checked' {% endif %} {% if variables.courtesy_checkbox is defined and variables.courtesy_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='courtesy_checkbox' name='courtesy_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='courtesy' class='form-control' name='courtesy' type='number' value='{{ variables.courtesy is defined ? variables.courtesy }}' placeholder='' /></td>
+                <td><input id='courtesy_notes' class='form-control' name='courtesy_notes' type='text' value='{{ variables.courtesy is defined ? variables.courtesy_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Craft</td>
+                <td>Dex + Int</td>
+                <td><input {% if variables.craft_checkbox is defined and variables.craft_checkbox == 1 %} checked='checked' {% endif %} {% if variables.craft_checkbox is defined and variables.craft_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='craft_checkbox' name='craft_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='craft' class='form-control' name='craft' type='number' value='{{ variables.craft is defined ? variables.craft }}' placeholder='' /></td>
+                <td><input id='craft_notes' class='form-control' name='craft_notes' type='text' value='{{ variables.craft is defined ? variables.craft_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Culture</td>
+                <td>Int x2</td>
+                <td><input {% if variables.culture_checkbox is defined and variables.culture_checkbox == 1 %} checked='checked' {% endif %} {% if variables.culture_checkbox is defined and variables.culture_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='culture_checkbox' name='culture_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='culture' class='form-control' name='culture' type='number' value='{{ variables.culture is defined ? variables.culture }}' placeholder='' /></td>
+                <td><input id='culture_notes' class='form-control' name='culture_notes' type='text' value='{{ variables.culture is defined ? variables.culture_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Disguise</td>
+                <td>Int + Cha</td>
+                <td><input {% if variables.disguise_checkbox is defined and variables.disguise_checkbox == 1 %} checked='checked' {% endif %} {% if variables.disguise_checkbox is defined and variables.disguise_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='disguise_checkbox' name='disguise_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='disguise' class='form-control' name='disguise' type='number' value='{{ variables.disguise is defined ? variables.disguise }}' placeholder='' /></td>
+                <td><input id='disguise_notes' class='form-control' name='disguise_notes' type='text' value='{{ variables.disguise is defined ? variables.disguise_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Engineering</td>
+                <td>Int x2</td>
+                <td><input {% if variables.engineering_checkbox is defined and variables.engineering_checkbox == 1 %} checked='checked' {% endif %} {% if variables.engineering_checkbox is defined and variables.engineering_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='engineering_checkbox' name='engineering_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='engineering' class='form-control' name='engineering' type='number' value='{{ variables.engineering is defined ? variables.engineering }}' placeholder='' /></td>
+                <td><input id='engineering_notes' class='form-control' name='engineering_notes' type='text' value='{{ variables.engineering is defined ? variables.engineering_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Gambling</td>
+                <td>Int + Pow</td>
+                <td><input {% if variables.gambling_checkbox is defined and variables.gambling_checkbox == 1 %} checked='checked' {% endif %} {% if variables.gambling_checkbox is defined and variables.gambling_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='gambling_checkbox' name='gambling_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='gambling' class='form-control' name='gambling' type='number' value='{{ variables.gambling is defined ? variables.gambling }}' placeholder='' /></td>
+                <td><input id='gambling_notes' class='form-control' name='gambling_notes' type='text' value='{{ variables.gambling is defined ? variables.gambling_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Healing</td>
+                <td>Int + Pow</td>
+                <td><input {% if variables.healing_checkbox is defined and variables.healing_checkbox == 1 %} checked='checked' {% endif %} {% if variables.healing_checkbox is defined and variables.healing_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='healing_checkbox' name='healing_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='healing' class='form-control' name='healing' type='number' value='{{ variables.healing is defined ? variables.healing }}' placeholder='' /></td>
+                <td><input id='healing_notes' class='form-control' name='healing_notes' type='text' value='{{ variables.healing is defined ? variables.healing_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Language</td>
+                <td>Int + Cha</td>
+                <td><input {% if variables.language_checkbox is defined and variables.language_checkbox == 1 %} checked='checked' {% endif %} {% if variables.language_checkbox is defined and variables.language_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='language_checkbox' name='language_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='language' class='form-control' name='language' type='number' value='{{ variables.language is defined ? variables.language }}' placeholder='' /></td>
+                <td><input id='language_notes' class='form-control' name='language_notes' type='text' value='{{ variables.language is defined ? variables.language_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Literacy</td>
+                <td>Int x2</td>
+                <td><input {% if variables.literacy_checkbox is defined and variables.literacy_checkbox == 1 %} checked='checked' {% endif %} {% if variables.literacy_checkbox is defined and variables.literacy_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='literacy_checkbox' name='literacy_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='literacy' class='form-control' name='literacy' type='number' value='{{ variables.literacy is defined ? variables.literacy }}' placeholder='' /></td>
+                <td><input id='literacy_notes' class='form-control' name='literacy_notes' type='text' value='{{ variables.literacy is defined ? variables.literacy_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Lockpicking</td>
+                <td>Dex x2</td>
+                <td><input {% if variables.lockpicking_checkbox is defined and variables.lockpicking_checkbox == 1 %} checked='checked' {% endif %} {% if variables.lockpicking_checkbox is defined and variables.lockpicking_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='lockpicking_checkbox' name='lockpicking_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='lockpicking' class='form-control' name='lockpicking' type='number' value='{{ variables.lockpicking is defined ? variables.lockpicking }}' placeholder='' /></td>
+                <td><input id='lockpicking_notes' class='form-control' name='lockpicking_notes' type='text' value='{{ variables.lockpicking is defined ? variables.lockpicking_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Lore</td>
+                <td>Int x2</td>
+                <td><input {% if variables.lore_checkbox is defined and variables.lore_checkbox == 1 %} checked='checked' {% endif %} {% if variables.lore_checkbox is defined and variables.lore_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='lore_checkbox' name='lore_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='lore' class='form-control' name='lore' type='number' value='{{ variables.lore is defined ? variables.lore }}' placeholder='' /></td>
+                <td><input id='lore_notes' class='form-control' name='lore_notes' type='text' value='{{ variables.lore is defined ? variables.lore_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Mechanisms</td>
+                <td>Dex + Int</td>
+                <td><input {% if variables.mechanisms_checkbox is defined and variables.mechanisms_checkbox == 1 %} checked='checked' {% endif %} {% if variables.mechanisms_checkbox is defined and variables.mechanisms_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='mechanisms_checkbox' name='mechanisms_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='mechanisms' class='form-control' name='mechanisms' type='number' value='{{ variables.mechanisms is defined ? variables.mechanisms }}' placeholder='' /></td>
+                <td><input id='mechanisms_notes' class='form-control' name='mechanisms_notes' type='text' value='{{ variables.mechanisms is defined ? variables.mechanisms_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Musicianship</td>
+                <td>Dex + Cha</td>
+                <td><input {% if variables.musicianship_checkbox is defined and variables.musicianship_checkbox == 1 %} checked='checked' {% endif %} {% if variables.musicianship_checkbox is defined and variables.musicianship_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='musicianship_checkbox' name='musicianship_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='musicianship' class='form-control' name='musicianship' type='number' value='{{ variables.musicianship is defined ? variables.musicianship }}' placeholder='' /></td>
+                <td><input id='musicianship_notes' class='form-control' name='musicianship_notes' type='text' value='{{ variables.musicianship is defined ? variables.musicianship_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Navigation</td>
+                <td>Int + Pow</td>
+                <td><input {% if variables.navigation_checkbox is defined and variables.navigation_checkbox == 1 %} checked='checked' {% endif %} {% if variables.navigation_checkbox is defined and variables.navigation_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='navigation_checkbox' name='navigation_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='navigation' class='form-control' name='navigation' type='number' value='{{ variables.navigation is defined ? variables.navigation }}' placeholder='' /></td>
+                <td><input id='navigation_notes' class='form-control' name='navigation_notes' type='text' value='{{ variables.navigation is defined ? variables.navigation_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Oratory</td>
+                <td>Pow + Cha</td>
+                <td><input {% if variables.oratory_checkbox is defined and variables.oratory_checkbox == 1 %} checked='checked' {% endif %} {% if variables.oratory_checkbox is defined and variables.oratory_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='oratory_checkbox' name='oratory_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='oratory' class='form-control' name='oratory' type='number' value='{{ variables.oratory is defined ? variables.oratory }}' placeholder='' /></td>
+                <td><input id='oratory_notes' class='form-control' name='oratory_notes' type='text' value='{{ variables.oratory is defined ? variables.oratory_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Seamanship</td>
+                <td>Int + Con</td>
+                <td><input {% if variables.seamanship_checkbox is defined and variables.seamanship_checkbox == 1 %} checked='checked' {% endif %} {% if variables.seamanship_checkbox is defined and variables.seamanship_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='seamanship_checkbox' name='seamanship_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='seamanship' class='form-control' name='seamanship' type='number' value='{{ variables.seamanship is defined ? variables.seamanship }}' placeholder='' /></td>
+                <td><input id='seamanship_notes' class='form-control' name='seamanship_notes' type='text' value='{{ variables.seamanship is defined ? variables.seamanship_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Seduction</td>
+                <td>Int + Cha</td>
+                <td><input {% if variables.seduction_checkbox is defined and variables.seduction_checkbox == 1 %} checked='checked' {% endif %} {% if variables.seduction_checkbox is defined and variables.seduction_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='seduction_checkbox' name='seduction_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='seduction' class='form-control' name='seduction' type='number' value='{{ variables.seduction is defined ? variables.seduction }}' placeholder='' /></td>
+                <td><input id='seduction_notes' class='form-control' name='seduction_notes' type='text' value='{{ variables.seduction is defined ? variables.seduction_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Sleight</td>
+                <td>Dex + Cha</td>
+                <td><input {% if variables.sleight_checkbox is defined and variables.sleight_checkbox == 1 %} checked='checked' {% endif %} {% if variables.sleight_checkbox is defined and variables.sleight_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='sleight_checkbox' name='sleight_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='sleight' class='form-control' name='sleight' type='number' value='{{ variables.sleight is defined ? variables.sleight }}' placeholder='' /></td>
+                <td><input id='sleight_notes' class='form-control' name='sleight_notes' type='text' value='{{ variables.sleight is defined ? variables.sleight_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Streetwise</td>
+                <td>Pow + Cha</td>
+                <td><input {% if variables.streetwise_checkbox is defined and variables.streetwise_checkbox == 1 %} checked='checked' {% endif %} {% if variables.streetwise_checkbox is defined and variables.streetwise_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='streetwise_checkbox' name='streetwise_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='streetwise' class='form-control' name='streetwise' type='number' value='{{ variables.streetwise is defined ? variables.streetwise }}' placeholder='' /></td>
+                <td><input id='streetwise_notes' class='form-control' name='streetwise_notes' type='text' value='{{ variables.streetwise is defined ? variables.streetwise_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Survival</td>
+                <td>Con + Pow</td>
+                <td><input {% if variables.survival_checkbox is defined and variables.survival_checkbox == 1 %} checked='checked' {% endif %} {% if variables.survival_checkbox is defined and variables.survival_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='survival_checkbox' name='survival_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='survival' class='form-control' name='survival' type='number' value='{{ variables.survival is defined ? variables.survival }}' placeholder='' /></td>
+                <td><input id='survival_notes' class='form-control' name='survival_notes' type='text' value='{{ variables.survival is defined ? variables.survival_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Teach</td>
+                <td>Int + Cha</td>
+                <td><input {% if variables.teach_checkbox is defined and variables.teach_checkbox == 1 %} checked='checked' {% endif %} {% if variables.teach_checkbox is defined and variables.teach_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='teach_checkbox' name='teach_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='teach' class='form-control' name='teach' type='number' value='{{ variables.teach is defined ? variables.teach }}' placeholder='' /></td>
+                <td><input id='teach_notes' class='form-control' name='teach_notes' type='text' value='{{ variables.teach is defined ? variables.teach_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Track</td>
+                <td>Int + Con</td>
+                <td><input {% if variables.track_checkbox is defined and variables.track_checkbox == 1 %} checked='checked' {% endif %} {% if variables.track_checkbox is defined and variables.track_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='track_checkbox' name='track_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='track' class='form-control' name='track' type='number' value='{{ variables.track is defined ? variables.track }}' placeholder='' /></td>
+                <td><input id='track_notes' class='form-control' name='track_notes' type='text' value='{{ variables.track is defined ? variables.track_notes }}' placeholder='' /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Magic Skills</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td><h4>Skill</h4></td>
+                <td><h4>Base %</h4></td>
+                <td><h4>Culture/Career</h4></td>
+                <td><h4><center>%</center></h4></td>
+                <td><h4>Notes</h4></td>
+            </tr>
+            <tr>
+                <td>Binding</td>
+                <td>Cha + Pow</td>
+                <td><input {% if variables.binding_checkbox is defined and variables.binding_checkbox == 1 %} checked='checked' {% endif %} {% if variables.binding_checkbox is defined and variables.binding_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='binding_checkbox' name='binding_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='binding' class='form-control' name='binding' type='number' value='{{ variables.binding is defined ? variables.binding }}' placeholder='' /></td>
+                <td><input id='binding_notes' class='form-control' name='binding_notes' type='text' value='{{ variables.binding is defined ? variables.binding_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Devotion</td>
+                <td>Cha + Pow</td>
+                <td><input {% if variables.devotion_checkbox is defined and variables.devotion_checkbox == 1 %} checked='checked' {% endif %} {% if variables.devotion_checkbox is defined and variables.devotion_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='devotion_checkbox' name='devotion_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='devotion' class='form-control' name='devotion' type='number' value='{{ variables.devotion is defined ? variables.devotion }}' placeholder='' /></td>
+                <td><input id='devotion_notes' class='form-control' name='devotion_notes' type='text' value='{{ variables.devotion is defined ? variables.devotion_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Exhort</td>
+                <td>Int + Cha</td>
+                <td><input {% if variables.exhort_checkbox is defined and variables.exhort_checkbox == 1 %} checked='checked' {% endif %} {% if variables.exhort_checkbox is defined and variables.exhort_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='exhort_checkbox' name='exhort_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='exhort' class='form-control' name='exhort' type='number' value='{{ variables.exhort is defined ? variables.exhort }}' placeholder='' /></td>
+                <td><input id='exhort_notes' class='form-control' name='exhort_notes' type='text' value='{{ variables.exhort is defined ? variables.exhort_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Folk Magic</td>
+                <td>Cha + Pow</td>
+                <td><input {% if variables.folk_magic_checkbox is defined and variables.folk_magic_checkbox == 1 %} checked='checked' {% endif %} {% if variables.folk_magic_checkbox is defined and variables.folk_magic_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='folk_magic_checkbox' name='folk_magic_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='folk_magic' class='form-control' name='folk_magic' type='number' value='{{ variables.folk_magic is defined ? variables.folk_magic }}' placeholder='' /></td>
+                <td><input id='folk_magic_notes' class='form-control' name='folk_magic_notes' type='text' value='{{ variables.folk_magic is defined ? variables.folk_magic_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Invocation</td>
+                <td>Int x2</td>
+                <td><input {% if variables.invocation_checkbox is defined and variables.invocation_checkbox == 1 %} checked='checked' {% endif %} {% if variables.invocation_checkbox is defined and variables.invocation_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='invocation_checkbox' name='invocation_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='invocation' class='form-control' name='invocation' type='number' value='{{ variables.invocation is defined ? variables.invocation }}' placeholder='' /></td>
+                <td><input id='invocation_notes' class='form-control' name='invocation_notes' type='text' value='{{ variables.invocation is defined ? variables.invocation_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Meditation</td>
+                <td>Int + Con</td>
+                <td><input {% if variables.meditation_checkbox is defined and variables.meditation_checkbox == 1 %} checked='checked' {% endif %} {% if variables.meditation_checkbox is defined and variables.meditation_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='meditation_checkbox' name='meditation_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='meditation' class='form-control' name='meditation' type='number' value='{{ variables.meditation is defined ? variables.meditation }}' placeholder='' /></td>
+                <td><input id='meditation_notes' class='form-control' name='meditation_notes' type='text' value='{{ variables.meditation is defined ? variables.meditation_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Mysticism</td>
+                <td>Pow + Con</td>
+                <td><input {% if variables.mysticism_checkbox is defined and variables.mysticism_checkbox == 1 %} checked='checked' {% endif %} {% if variables.mysticism_checkbox is defined and variables.mysticism_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='mysticism_checkbox' name='mysticism_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='mysticism' class='form-control' name='mysticism' type='number' value='{{ variables.mysticism is defined ? variables.mysticism }}' placeholder='' /></td>
+                <td><input id='mysticism_notes' class='form-control' name='mysticism_notes' type='text' value='{{ variables.mysticism is defined ? variables.mysticism_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Shaping</td>
+                <td>Int + Pow</td>
+                <td><input {% if variables.shaping_checkbox is defined and variables.shaping_checkbox == 1 %} checked='checked' {% endif %} {% if variables.shaping_checkbox is defined and variables.shaping_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='shaping_checkbox' name='shaping_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='shaping' class='form-control' name='shaping' type='number' value='{{ variables.shaping is defined ? variables.shaping }}' placeholder='' /></td>
+                <td><input id='shaping_notes' class='form-control' name='shaping_notes' type='text' value='{{ variables.shaping is defined ? variables.shaping_notes }}' placeholder='' /></td>
+            </tr>
+            <tr>
+                <td>Trance</td>
+                <td>Pow + Con</td>
+                <td><input {% if variables.trance_checkbox is defined and variables.trance_checkbox == 1 %} checked='checked' {% endif %} {% if variables.trance_checkbox is defined and variables.trance_checkbox == 0 %} checked='unchecked' {% endif %} class='' id='trance_checkbox' name='trance_checkbox' placeholder='' type='checkbox' align='center' /></td>
+                <td><input id='trance' class='form-control' name='trance' type='number' value='{{ variables.trance is defined ? variables.trance }}' placeholder='' /></td>
+                <td><input id='trance_notes' class='form-control' name='trance_notes' type='text' value='{{ variables.trance is defined ? variables.trance_notes }}' placeholder='' /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="other_skills" class="col-sm-2 control-label">
+                <h4 class="header-title">Other Skills</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea class="form-control mention" id="other_skills" name="other_skills" rows="3" placeholder="">{{ variables.other_skills is defined ? variables.other_skills }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="combat_styles" class="col-sm-2 control-label">
+                <h4 class="header-title">Combat Styles</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea class="form-control mention" id="combat_styles" name="combat_styles" rows="3" placeholder="">{{ variables.combat_styles is defined ? variables.combat_styles }}</textarea>
+                <p class="description form-control-description">Style, Weapons, Trait, (Str + Dex), Percent</p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="languages" class="col-sm-2 control-label">
+                <h4 class="header-title">Languages</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea class="form-control mention" id="languages" name="languages" rows="3" placeholder="">{{ variables.languages is defined ? variables.languages }}</textarea>
+                <p class="description form-control-description">Language, (Int + Cha), Percent</p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="passions" class="col-sm-2 control-label">
+                <h4 class="header-title">Passions</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea class="form-control mention" id="passions" name="passions" rows="3" placeholder="">{{ variables.passions is defined ? variables.passions }}</textarea>
+                <p class="description form-control-description">Passion, (Base +30%), Percent</p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <h2>Combat</h2>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="fatigue" class="col-sm-2 control-label">
+                <h4 class="header-title">Fatigue</h4>
+            </label>
+            <div class="col-sm-12">
+                <select class="form-control" id="fatigue" name="fatigue">
+                    <option value="Fresh" {% if variables.fatigue is defined and variables.fatigue == "Fresh" %}selected="selected" {% endif %}>Fresh</option>
+                    <option value="Winded" {% if variables.fatigue is defined and variables.fatigue == "Winded" %}selected="selected" {% endif %}>Winded</option>
+                    <option value="Tired" {% if variables.fatigue is defined and variables.fatigue == "Tired" %}selected="selected" {% endif %}>Tired</option>
+                    <option value="Wearied" {% if variables.fatigue is defined and variables.fatigue == "Wearied" %}selected="selected" {% endif %}>Wearied</option>
+                    <option value="Exhausted" {% if variables.fatigue is defined and variables.fatigue == "Exhausted" %}selected="selected" {% endif %}>Exhausted</option>
+                    <option value="Debilitated" {% if variables.fatigue is defined and variables.fatigue == "Debilitated" %}selected="selected" {% endif %}>Debilitated</option>
+                    <option value="Incapacitated" {% if variables.fatigue is defined and variables.fatigue == "Incapacitated" %}selected="selected" {% endif %}>Incapacitated</option>
+                    <option value="Semi-Conscious" {% if variables.fatigue is defined and variables.fatigue == "Semi-Conscious" %}selected="selected" {% endif %}>Semi-Conscious</option>
+                    <option value="Comatose" {% if variables.fatigue is defined and variables.fatigue == "Comatose" %}selected="selected" {% endif %}>Comatose</option>
+                    <option value="Dead" {% if variables.fatigue is defined and variables.fatigue == "Dead" %}selected="selected" {% endif %}>Dead</option>
+                </select>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <h3>Hit Locations</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td><h4>d20</h4></td>
+                <td><h4>Location</h4></td>
+                <td><h4>Max HP</h4></td>
+                <td><h4>Current HP</h4></td>
+            </tr>
+            <!-- HEAD -->
+            <tr>
+                <td>19 - 20</td>
+                <td>Head</td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.head_max_hp is defined ? variables.head_max_hp }}" class="form-control" id="head_max_hp" name="head_max_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.head_current_hp is defined ? variables.head_current_hp }}" class="form-control" id="head_current_hp" name="head_current_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+            </tr>
+            <!-- LEFT ARM -->
+            <tr>
+                <td>16 - 18</td>
+                <td>Left Arm</td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.left_arm_max_hp is defined ? variables.left_arm_max_hp }}" class="form-control" id="left_arm_max_hp" name="left_arm_max_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.left_arm_current_hp is defined ? variables.left_arm_current_hp }}" class="form-control" id="left_arm_current_hp" name="left_arm_current_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+            </tr>
+            <!-- RIGHT ARM -->
+            <tr>
+                <td>13 - 15</td>
+                <td>Right Arm</td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.right_arm_max_hp is defined ? variables.right_arm_max_hp }}" class="form-control" id="right_arm_max_hp" name="right_arm_max_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.right_arm_current_hp is defined ? variables.right_arm_current_hp }}" class="form-control" id="right_arm_current_hp" name="right_arm_current_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+            </tr>
+            <!-- CHEST -->
+            <tr>
+                <td>10 - 12</td>
+                <td>Chest</td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.chest_max_hp is defined ? variables.chest_max_hp }}" class="form-control" id="chest_max_hp" name="chest_max_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.chest_current_hp is defined ? variables.chest_current_hp }}" class="form-control" id="chest_current_hp" name="chest_current_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+            </tr>
+            <!-- ABDOMEN -->
+            <tr>
+                <td>7 - 9</td>
+                <td>Abdomen</td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.abdomen_max_hp is defined ? variables.abdomen_max_hp }}" class="form-control" id="abdomen_max_hp" name="abdomen_max_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.abdomen_current_hp is defined ? variables.abdomen_current_hp }}" class="form-control" id="abdomen_current_hp" name="abdomen_current_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+            </tr>
+            <!-- LEFT LEG -->
+            <tr>
+                <td>4 - 6</td>
+                <td>Left Leg</td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.left_leg_max_hp is defined ? variables.left_leg_max_hp }}" class="form-control" id="left_leg_max_hp" name="left_leg_max_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.left_leg_current_hp is defined ? variables.left_leg_current_hp }}" class="form-control" id="left_leg_current_hp" name="left_leg_current_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+            </tr>
+            <!-- RIGHT LEG -->
+            <tr>
+                <td>1 -3</td>
+                <td>Right Leg</td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.right_leg_max_hp is defined ? variables.right_leg_max_hp }}" class="form-control" id="right_leg_max_hp" name="right_leg_max_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+                <td>
+                    <div class="col-sm-12">
+                        <input value="{{ variables.right_leg_current_hp is defined ? variables.right_leg_current_hp }}" class="form-control" id="right_leg_current_hp" name="right_leg_current_hp" placeholder="" type="number" />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="wounds" class="col-sm-2 control-label">
+                <h4 class="header-title">Wounds</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea class="form-control mention" id="wounds" name="wounds" rows="3" placeholder="">{{ variables.wounds is defined ? variables.wounds }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="equipment" class="col-sm-2 control-label">
+                <h4 class="header-title">Equipment</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea class="form-control mention" id="equipment" name="equipment" rows="3" placeholder="">{{ variables.equipment is defined ? variables.equipment }}</textarea>
+                <p class="description form-control-description">Item, ENC, Burdened = Str x2, Overloaded = Str x3</p>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="armor" class="col-sm-2 control-label">
+                <h4 class="header-title">Armor</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea class="form-control mention" id="armor" name="armor" rows="3" placeholder="">{{ variables.armor is defined ? variables.armor }}</textarea>
+                <p class="description form-control-description">Armor Worn, AP, ENC (worn armor counts as half)</p>
+            </div>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <label for="total_ap" class="col-sm-2 control-label">
+                            <h4 class="header-title">Total AP</h4>
+                        </label>
+                        <div class="col-sm-12">
+                            <input value="{{ variables.total_ap is defined ? variables.total_ap }}" class="form-control" id="total_ap" name="total_ap" placeholder="" type="number" />
+                            <p class="description form-control-description"></p>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <label for="armor_penalty" class="col-sm-2 control-label">
+                            <h4 class="header-title">Armor Penalty</h4>
+                        </label>
+                        <div class="col-sm-12">
+                            <input value="{{ variables.armor_penalty is defined ? variables.armor_penalty }}" class="form-control" id="armor_penalty" name="armor_penalty" placeholder="" type="number" />
+                            <p class="description form-control-description"></p>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="ibox">
+        <div class="ibox-content">
+            <label for="weapons_and_shields" class="col-sm-2 control-label">
+                <h4 class="header-title">Weapons and Shields</h4>
+            </label>
+            <div class="col-sm-12">
+                <textarea class="form-control mention" id="weapons_and_shields" name="weapons_and_shields" rows="3" placeholder="">{{ variables.weapons_and_shields is defined ? variables.weapons_and_shields }}</textarea>
+                <p class="description form-control-description"></p>
+            </div>
+        </div>
+    </div>
+
+</div>

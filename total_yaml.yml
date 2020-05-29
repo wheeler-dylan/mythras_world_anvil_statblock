@@ -1,0 +1,836 @@
+fields:
+  #demographics
+  player_name:
+    input: string
+    label: Player Name
+  date:
+    input: string
+    label: Date
+  species:
+    input: string
+    label: Species
+  race:
+    input: string
+    label: Race
+  culture: 
+    input: string
+    label: Culture
+  homeland:
+    input: string
+    label: Homeland
+  career:
+    input: string
+    label: Career
+  social_class:
+    input: String
+    label: Social Class
+  gender:
+    input: string
+    label: Gender
+  frame:
+    input: string
+    label: Frame
+  handedness:
+    input: string
+    label: Handedness
+  age:
+    input: integer
+    label: Age
+  height: 
+    input: string
+    label: Height
+  weight:
+    input: string
+    label: Weight
+  #description
+  description:
+    input: text
+    label: Description
+  note:
+    input: text
+    label: Notes
+  experience_rolls:
+    input: text
+    label: Experience Rolls
+  cult_brotherhood_information:
+    input: text
+    label: Cult/Brotherhood Information
+  money_and_wealth:
+    input: text
+    label: Money and Wealth
+  #magic
+  magic_points:
+    input: integer
+    label: Magic Points
+  magic_points_used:
+    input: integer
+    label: Magic Points Used
+  magic_and_abilities:
+    input: text
+    label: Magic and Abilities
+    description: Spells, Spirits, Talents, Miracles...
+  #characteristics
+  strength:
+    input: integer
+    label: Strength
+    min: 1
+  constitution:
+    input: integer
+    label: Constitution
+    min: 1
+  size:
+    input: integer
+    label: Size
+    min: 1
+  dexterity:
+    input: integer
+    label: Dexterity
+    min: 1
+  intelligence:
+    input: integer
+    label: Intelligence
+    min: 1
+  power:
+    input: integer
+    label: Power
+    min: 1
+  charisma:
+    input: integer
+    label: Charisma
+    min: 1
+  #attributes
+  action_points:
+    input: integer
+    label: Action Points
+  damage_modifier:
+    input: string
+    label: Damage Modifier
+  experience_modifier:
+    input: integer
+    label: Experience Modifier
+  healing_rate:
+    input: integer
+    label: Healing Rate
+  initiative:
+    input: integer
+    label: Initiative
+  luck_points:
+    input: integer
+    label: Luck Points
+  movement_rate:
+    input: integer
+    label: Movement Rate
+  #skills
+  athletics:
+    input: integer
+    label: Athletics
+    description: Str + Dex
+    min: 0
+  athletics_checkbox:
+    input: checkbox
+    label: Athletics Checkbox
+  athletics_notes:
+    input: string
+    label: Athletics Notes
+  boating:
+    input: integer
+    label: Boating
+    description: Str + Con
+    min: 0
+  boating_checkbox:
+    input: checkbox
+    label: Boating Checkbox
+  boating_notes:
+    input: string
+    label: Boating Notes
+  conceal:
+    input: integer
+    label: Conceal
+    description: Dex + Pow
+    min: 0
+  conceal_checkbox:
+    input: checkbox
+    label: Conceal Checkbox
+  conceal_notes:
+    input: string
+    label: Conceal Notes
+  customs:
+    input: integer
+    label: Customs
+    description: Int x2
+    min: 0
+  customs_checkbox:
+    input: checkbox
+    label: Customs Checkbox
+  customs_notes:
+    input: string
+    label: Customs Notes
+  dance:
+    input: integer
+    label: Dance
+    description: Dex + Cha
+    min: 0
+  dance_checkbox:
+    input: checkbox
+    label: Dance Checkbox
+  dance_notes:
+    input: string
+    label: Dance Notes
+  deceit:
+    input: integer
+    label: Deceit
+    description: Int + Cha
+    min: 0
+  deceit_checkbox:
+    input: checkbox
+    label: Deceit Checkbox
+  deceit_notes:
+    input: string
+    label: Deceit Notes
+  drive:
+    input: integer
+    label: Drive
+    description: Dex + Pow
+    min: 0
+  drive_checkbox:
+    input: checkbox
+    label: Drive Checkbox
+  drive_notes:
+    input: string
+    label: Drive Notes
+  first_aid:
+    input: integer
+    label: First Aid
+    description: Int + Dex
+    min: 0
+  first_aid_checkbox:
+    input: checkbox
+    label: First Aid Checkbox
+  first_aid_notes:
+    input: string
+    label: First Aid Notes
+  influence:
+    input: integer
+    label: Influence
+    description: Cha x2
+    min: 0
+  influence_checkbox:
+    input: checkbox
+    label: Influence Checkbox
+  influence_notes:
+    input: string
+    label: Influence Notes
+  insight:
+    input: integer
+    label: Insight
+    description: Int + Pow
+    min: 0
+  insight_checkbox:
+    input: checkbox
+    label: Insight Checkbox
+  insight_notes:
+    input: string
+    label: Insight Notes
+  locale:
+    input: integer
+    label: Locale
+    description: Int x2
+    min: 0
+  locale_checkbox:
+    input: checkbox
+    label: Locale Checkbox
+  locale_notes:
+    input: string
+    label: Locale Notes
+  perception:
+    input: integer
+    label: Perception
+    description: Int + Pow
+    min: 0
+  perception_checkbox:
+    input: checkbox
+    label: Perception Checkbox
+  perception_notes:
+    input: string
+    label: Perception Notes
+  ride:
+    input: integer
+    label: Ride
+    description: Dex + Pow
+    min: 0
+  ride_checkbox:
+    input: checkbox
+    label: Ride Checkbox
+  ride_notes:
+    input: string
+    label: Ride Notes
+  stealth:
+    input: integer
+    label: Stealth
+    description: Dex + Int
+    min: 0
+  stealth_checkbox:
+    input: checkbox
+    label: Stealth Checkbox
+  stealth_notes:
+    input: string
+    label: Stealth Notes
+  swim:
+    input: integer
+    label: Swim
+    description: Str + Con
+    min: 0
+  swim_checkbox:
+    input: checkbox
+    label: Swim Checkbox
+  swim_notes:
+    input: string
+    label: Swim Notes
+  unarmed:
+    input: integer
+    label: Unarmed
+    description: Str + Dex
+    min: 0
+  unarmed_checkbox:
+    input: checkbox
+    label: Unarmed Checkbox
+  unarmed_notes:
+    input: string
+    label: Unarmed Notes
+  brawn:
+    input: integer
+    label: Brawn
+    description: Str + Siz
+    min: 0
+  brawn_checkbox:
+    input: checkbox
+    label: Brawn Checkbox
+  brawn_notes:
+    input: string
+    label: Brawn Notes
+  endurance:
+    input: integer
+    label: Endurance
+    description: Con x2
+    min: 0
+  endurance_checkbox:
+    input: checkbox
+    label: Endurance Checkbox
+  endurance_notes:
+    input: string
+    label: Endurance Notes
+  evade:
+    input: integer
+    label: Evade
+    description: Dex x2
+    min: 0
+  evade_checkbox:
+    input: checkbox
+    label: Evade Checkbox
+  evade_notes:
+    input: string
+    label: Evade Notes
+  willpower:
+    input: integer
+    label: Willpower
+    description: Pow x2
+    min: 0
+  willpower_checkbox:
+    input: checkbox
+    label: Willpower Checkbox
+  willpower_notes:
+    input: string
+    label: Willpower Notes
+  acting:
+    input: integer
+    label: Acting
+    description: Cha x2
+    min: 0
+  acting_checkbox:
+    input: checkbox
+    label: Acting Checkbox
+  acting_notes:
+    input: string
+    label: Acting Notes
+  acrobatics:
+    input: integer
+    label: Acrobatics
+    description: Str + Dex
+    min: 0
+  acrobatics_checkbox:
+    input: checkbox
+    label: Acrobatics Checkbox
+  acrobatics_notes:
+    input: string
+    label: Acrobatics Notes
+  art:
+    input: integer
+    label: Art
+    description: Cha + Pow
+    min: 0
+  art_checkbox:
+    input: checkbox
+    label: Art Checkbox
+  art_notes:
+    input: string
+    label: Art Notes
+  bureaucracy:
+    input: integer
+    label: Bureaucracy
+    description: Int x2
+    min: 0
+  bureaucracy_checkbox:
+    input: checkbox
+    label: Bureaucracy Checkbox
+  bureaucracy_notes:
+    input: string
+    label: Bureaucracy Notes
+  commerce:
+    input: integer
+    label: Commerce
+    description: Int + Cha
+    min: 0
+  commerce_checkbox:
+    input: checkbox
+    label: Commerce Checkbox
+  commerce_notes:
+    input: string
+    label: Commerce Notes
+  courtesy:
+    input: integer
+    label: Courtesy
+    description: Int + Cha
+    min: 0
+  courtesy_checkbox:
+    input: checkbox
+    label: Courtesy Checkbox
+  courtesy_notes:
+    input: string
+    label: Courtesy Notes
+  craft:
+    input: integer
+    label: Craft
+    description: Dex + Int
+    min: 0
+  craft_checkbox:
+    input: checkbox
+    label: Craft Checkbox
+  craft_notes:
+    input: string
+    label: Craft Notes
+  culture:
+    input: integer
+    label: Culture
+    description: Int x2
+    min: 0
+  culture_checkbox:
+    input: checkbox
+    label: Culture Checkbox
+  culture_notes:
+    input: string
+    label: Culture Notes
+  disguise:
+    input: integer
+    label: Disguise
+    description: Int + Cha
+    min: 0
+  disguise_checkbox:
+    input: checkbox
+    label: Disguise Checkbox
+  disguise_notes:
+    input: string
+    label: Disguise Notes
+  engineering:
+    input: integer
+    label: Engineering
+    description: Int x2
+    min: 0
+  engineering_checkbox:
+    input: checkbox
+    label: Engineering Checkbox
+  engineering_notes:
+    input: string
+    label: Engineering Notes
+  gambling:
+    input: integer
+    label: Gambling
+    description: Int + Pow
+    min: 0
+  gambling_checkbox:
+    input: checkbox
+    label: Gambling Checkbox
+  gambling_notes:
+    input: string
+    label: Gambling Notes
+  healing:
+    input: integer
+    label: Healing
+    description: Int + Pow
+    min: 0
+  healing_checkbox:
+    input: checkbox
+    label: Healing Checkbox
+  healing_notes:
+    input: string
+    label: Healing Notes
+  language:
+    input: integer
+    label: Language
+    description: Int + Cha
+    min: 0
+  language_checkbox:
+    input: checkbox
+    label: Language Checkbox
+  language_notes:
+    input: string
+    label: Language Notes
+  literacy:
+    input: integer
+    label: Literacy
+    description: Int x2
+    min: 0
+  literacy_checkbox:
+    input: checkbox
+    label: Literacy Checkbox
+  literacy_notes:
+    input: string
+    label: Literacy Notes
+  lockpicking:
+    input: integer
+    label: Lockpicking
+    description: Dex x2
+    min: 0
+  lockpicking_checkbox:
+    input: checkbox
+    label: Lockpicking Checkbox
+  lockpicking_notes:
+    input: string
+    label: Lockpicking Notes
+  lore:
+    input: integer
+    label: Lore
+    description: Int x2
+    min: 0
+  lore_checkbox:
+    input: checkbox
+    label: Lore Checkbox
+  lore_notes:
+    input: string
+    label: Lore Notes
+  mechanisms:
+    input: integer
+    label: Mechanisms
+    description: Dex + Int
+    min: 0
+  mechanisms_checkbox:
+    input: checkbox
+    label: Mechanisms Checkbox
+  mechanisms_notes:
+    input: string
+    label: Mechanisms Notes
+  musicianship:
+    input: integer
+    label: Musicianship
+    description: Dex + Cha
+    min: 0
+  musicianship_checkbox:
+    input: checkbox
+    label: Musicianship Checkbox
+  musicianship_notes:
+    input: string
+    label: Musicianship Notes
+  navigation:
+    input: integer
+    label: Navigation
+    description: Int + Pow
+    min: 0
+  navigation_checkbox:
+    input: checkbox
+    label: Navigation Checkbox
+  navigation_notes:
+    input: string
+    label: Navigation Notes
+  oratory:
+    input: integer
+    label: Oratory
+    description: Pow + Cha
+    min: 0
+  oratory_checkbox:
+    input: checkbox
+    label: Oratory Checkbox
+  oratory_notes:
+    input: string
+    label: Oratory Notes
+  seamanship:
+    input: integer
+    label: Seamanship
+    description: Int + Con
+    min: 0
+  seamanship_checkbox:
+    input: checkbox
+    label: Seamanship Checkbox
+  seamanship_notes:
+    input: string
+    label: Seamanship Notes
+  seduction:
+    input: integer
+    label: Seduction
+    description: Int + Cha
+    min: 0
+  seduction_checkbox:
+    input: checkbox
+    label: Seduction Checkbox
+  seduction_notes:
+    input: string
+    label: Seduction Notes
+  sleight:
+    input: integer
+    label: Sleight
+    description: Dex + Cha
+    min: 0
+  sleight_checkbox:
+    input: checkbox
+    label: Sleight Checkbox
+  sleight_notes:
+    input: string
+    label: Sleight Notes
+  streetwise:
+    input: integer
+    label: Streetwise
+    description: Pow + Cha
+    min: 0
+  streetwise_checkbox:
+    input: checkbox
+    label: Streetwise Checkbox
+  streetwise_notes:
+    input: string
+    label: Streetwise Notes
+  survival:
+    input: integer
+    label: Survival
+    description: Con + Pow
+    min: 0
+  survival_checkbox:
+    input: checkbox
+    label: Survival Checkbox
+  survival_notes:
+    input: string
+    label: Survival Notes
+  teach:
+    input: integer
+    label: Teach
+    description: Int + Cha
+    min: 0
+  teach_checkbox:
+    input: checkbox
+    label: Teach Checkbox
+  teach_notes:
+    input: string
+    label: Teach Notes
+  track:
+    input: integer
+    label: Track
+    description: Int + Con
+    min: 0
+  track_checkbox:
+    input: checkbox
+    label: Track Checkbox
+  track_notes:
+    input: string
+    label: Track Notes
+  binding:
+    input: integer
+    label: Binding
+    description: Cha + Pow
+    min: 0
+  binding_checkbox:
+    input: checkbox
+    label: Binding Checkbox
+  binding_notes:
+    input: string
+    label: Binding Notes
+  devotion:
+    input: integer
+    label: Devotion
+    description: Cha + Pow
+    min: 0
+  devotion_checkbox:
+    input: checkbox
+    label: Devotion Checkbox
+  devotion_notes:
+    input: string
+    label: Devotion Notes
+  exhort:
+    input: integer
+    label: Exhort
+    description: Int + Cha
+    min: 0
+  exhort_checkbox:
+    input: checkbox
+    label: Exhort Checkbox
+  exhort_notes:
+    input: string
+    label: Exhort Notes
+  folk_magic:
+    input: integer
+    label: Folk Magic
+    description: Cha + Pow
+    min: 0
+  folk_magic_checkbox:
+    input: checkbox
+    label: Folk Magic Checkbox
+  folk_magic_notes:
+    input: string
+    label: Folk Magic Notes
+  invocation:
+    input: integer
+    label: Invocation
+    description: Int x2
+    min: 0
+  invocation_checkbox:
+    input: checkbox
+    label: Invocation Checkbox
+  invocation_notes:
+    input: string
+    label: Invocation Notes
+  meditation:
+    input: integer
+    label: Meditation
+    description: Int + Con
+    min: 0
+  meditation_checkbox:
+    input: checkbox
+    label: Meditation Checkbox
+  meditation_notes:
+    input: string
+    label: Meditation Notes
+  mysticism:
+    input: integer
+    label: Mysticism
+    description: Pow + Con
+    min: 0
+  mysticism_checkbox:
+    input: checkbox
+    label: Mysticism Checkbox
+  mysticism_notes:
+    input: string
+    label: Mysticism Notes
+  shaping:
+    input: integer
+    label: Shaping
+    description: Int + Pow
+    min: 0
+  shaping_checkbox:
+    input: checkbox
+    label: Shaping Checkbox
+  shaping_notes:
+    input: string
+    label: Shaping Notes
+  trance:
+    input: integer
+    label: Trance
+    description: Pow + Con
+    min: 0
+  trance_checkbox:
+    input: checkbox
+    label: Trance Checkbox
+  trance_notes:
+    input: string
+    label: Trance Notes
+  #other skills text field
+  other_skills:
+    input: text
+    label: Other Skills
+  combat_styles:
+    input: text
+    label: Combat Styles
+    description: Style, Weapons, Trait, (Str + Dex), Percent
+  languages:
+    input: text
+    label: Languages
+    description: Language, (Int + Cha), Percent
+  passions:
+    input: text
+    label: Passions
+    description: Passion, (Base +30%), Percent
+  #fatigue and hp
+  fatigue:
+    input: select
+    label: Fatigue
+    options: 
+      fresh: Fresh
+      winded: Winded
+      tired: Tired
+      wearied: Wearied
+      exhausted: Exhausted
+      debilitated: Debilitated
+      incapacitated: Incapacitated
+      semiconscious: Semi-Conscious
+      comatose: Comatose
+      dead: Dead
+  max_hp_head:
+    input: integer
+    label: Head Max HP
+  hp_head:
+    input: integer
+    label: Head Current HP
+  max_hp_left_arm:
+    input: integer
+    label: Left Arm Max HP
+  hp_left_arm:
+    input: integer
+    label: Left Arm Current HP
+  max_hp_right_arm:
+    input: integer
+    label: Right Arm Max HP
+  hp_right_arm:
+    input: integer
+    label: Right Arm Current HP
+  max_hp_chest:
+    input: integer
+    label: Chest Max HP
+  hp_chest:
+    input: integer
+    label: Chest Current HP
+  max_hp_abdomen:
+    input: integer
+    label: Abdomen Max HP
+  hp_abdomen:
+    input: integer
+    label: Abdomen Current HP
+  max_hp_left_leg:
+    input: integer
+    label: Left Leg Max HP
+  hp_left_leg:
+    input: integer
+    label: Left Leg Current HP
+  max_hp_right_leg:
+    input: integer
+    label: Right Leg Max HP
+  hp_right_leg:
+    input: integer
+    label: Right Leg Current HP
+  wounds:
+    input: text
+    label: Wounds
+  #gear
+  equipment:
+    input: text
+    label: Equipment
+    description: Item, ENC, Burdened = Str x2, Overloaded = Str x3
+  armor:
+    input: text
+    label: Armor
+    description: Armor Worn, AP, ENC (worn armor counts as half)
+  total_ap:
+    input: integer
+    label: Total AP
+  armor_penalty:
+    input: integer
+    label: Armor Penalty
+    Description: (Total Armor ENC/5)
+  weapons:
+    input: text
+    label: Weapons and Shields
+  
+    
